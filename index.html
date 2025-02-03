@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Lamaran Pekerjaan</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div style="margin-left: 0%;" class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Form Lamaran Kerja</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard v1</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+    
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <section class="col-lg-5 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+
+            <!-- /.card -->
+
+            <!-- DIRECT CHAT -->
+            <div class="card direct-chat direct-chat-primary">
+              <div class="card-header">
+                <h3 class="card-title">Data Diri</h3>
+
+                <div class="card-tools">
+                  <!-- <span title="3 New Messages" class="badge badge-primary">3</span> -->
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                 
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button> -->
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="form-group mx-3">
+                    <label for="namaLengkap">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan email">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="nomorTelp">Nomor Telepon</label>
+                    <input type="text" class="form-control" id="nomorTelp" placeholder="Masukkan nomor telepon">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="alamatLengkap">Alamat Lengkap</label>
+                    <textarea class="form-control" id="alamatLengkap" rows="2" placeholder="Masukkan alamat lengkap"></textarea>
+                </div>
+                <div class="form-group mx-3">
+                    <label for="ttl">Tempat, Tanggal Lahir</label>
+                    <input type="text" class="form-control" id="ttl" placeholder="Contoh: Jakarta, 01 Januari 2000">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="jenisKelamin">Jenis Kelamin</label>
+                    <select class="form-control" id="jenisKelamin">
+                        <option value="">Pilih</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <div class="form-group mx-3">
+                    <label for="statusPernikahan">Status Pernikahan</label>
+                    <select class="form-control" id="statusPernikahan">
+                        <option value="">Pilih</option>
+                        <option value="Belum Menikah">Belum Menikah</option>
+                        <option value="Menikah">Menikah</option>
+                        <option value="Cerai">Cerai</option>
+                    </select>
+                </div>
+                <div class="form-group mx-3">
+                    <label for="tanggungan">Tanggungan</label>
+                    <input type="number" class="form-control" id="tanggungan" placeholder="Masukkan jumlah tanggungan">
+                </div>
+            </div>
+            
+              <!-- /.card-body -->
+              <div class="card-footer">
+           
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <!--/.direct-chat -->
+
+            <!-- TO DO List -->
+           
+            <!-- /.card -->
+          </section>
+          <section class="col-lg-3 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+
+            <!-- /.card -->
+
+            <!-- DIRECT CHAT -->
+            <div class="card direct-chat direct-chat-primary">
+              <div class="card-header">
+                <h3 class="card-title">Infomasi Pekerjaan</h3>
+
+                <div class="card-tools">
+                  <!-- <span title="3 New Messages" class="badge badge-primary">3</span> -->
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                 
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button> -->
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="form-group mx-3">
+                    <label for="namaLengkap">Posisi Yang Dilamar</label>
+                    <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan Posisi Yang Dilamar">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="email">Gaji Yang Diharapkan</label>
+                    <input type="number" class="form-control" id="email" placeholder="Masukkan Gaji Yang Diharapkan">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="nomorTelp">Tanggal Bersedia Mulai Kerja</label>
+                    <input type="date" class="form-control" id="nomorTelp" placeholder="Masukkan nomor telepon">
+                </div>
+                
+               
+            </div>
+            
+              <!-- /.card-body -->
+              <div class="card-footer">
+           
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <div class="card direct-chat direct-chat-primary">
+              <div class="card-header">
+                <h3 class="card-title">Pendidikan</h3>
+
+                <div class="card-tools">
+                  <!-- <span title="3 New Messages" class="badge badge-primary">3</span> -->
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                 
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button> -->
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="form-group mx-3">
+                    <label for="namaLengkap">Pendidikan Terakhir</label>
+                    <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan Pendidikan Terakhir">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="email">Nama Institusi</label>
+                    <input type="text" class="form-control" id="email" placeholder="Masukkan Nama Institusi">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="nomorTelp">Jurusan</label>
+                    <input type="text" class="form-control" id="nomorTelp" placeholder="Masukkan Nama Jurusan">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="alamatLengkap">Tahun Lulus</label>
+                    <input type="date" class="form-control" id="nomorTelp" placeholder="Masukkan nomor telepon">
+                </div>
+               
+            </div>
+            
+              <!-- /.card-body -->
+              <div class="card-footer">
+           
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            
+            <!--/.direct-chat -->
+
+            <!-- TO DO List -->
+           
+            <!-- /.card -->
+          </section>
+          <section class="col-lg-4 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+
+            <!-- /.card -->
+
+            <!-- DIRECT CHAT -->
+            <div class="card direct-chat direct-chat-primary">
+              <div class="card-header">
+                <h3 class="card-title">Pengalaman Kerja</h3>
+
+                <div class="card-tools">
+                  <!-- <span title="3 New Messages" class="badge badge-primary">3</span> -->
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                 
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button> -->
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="form-group mx-3">
+                    <label for="namaPerusahaan">Nama Perusahaan</label>
+                    <input type="text" class="form-control" id="namaPerusahaan" placeholder="Masukkan nama perusahaan">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="jabatan">Jabatan</label>
+                    <input type="text" class="form-control" id="jabatan" placeholder="Masukkan jabatan">
+                </div>
+                <div class="form-group mx-3">
+                    <label for="periodeKerja">Periode Kerja</label>
+                    <div class="row">
+                        <div class="col">
+                            <input type="date" class="form-control" id="tglMulai" placeholder="Tanggal Mulai">
+                        </div>
+                        <div class="col">
+                            <input type="date" class="form-control" id="tglSelesai" placeholder="Tanggal Selesai">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mx-3">
+                    <label for="tanggungJawab">Tanggung Jawab Utama</label>
+                    <textarea class="form-control" id="tanggungJawab" rows="3" placeholder="Masukkan tanggung jawab utama"></textarea>
+                </div>
+                <div class="form-group mx-3">
+                    <label for="alasanBerhenti">Alasan Berhenti</label>
+                    <textarea class="form-control" id="alasanBerhenti" rows="3" placeholder="Masukkan alasan berhenti"></textarea>
+                </div>
+            </div>
+            
+            
+              <!-- /.card-body -->
+              <div class="card-footer">
+           
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <div class="card direct-chat direct-chat-primary">
+              <div class="card-header">
+                <h3 class="card-title">Dokumen Pendukung</h3>
+
+                <div class="card-tools">
+                  <!-- <span title="3 New Messages" class="badge badge-primary">3</span> -->
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                 
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button> -->
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row mx-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="uploadCV">Upload CV</label>
+                            <input type="file" class="form-control-file" id="uploadCV" onchange="previewFile(event, 'previewCV')">
+                            <img id="previewCV" src="#" alt="Preview CV" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="uploadSuratLamaran">Upload Surat Lamaran</label>
+                            <input type="file" class="form-control-file" id="uploadSuratLamaran" onchange="previewFile(event, 'previewSuratLamaran')">
+                            <img id="previewSuratLamaran" src="#" alt="Preview Surat Lamaran" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row mx-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="uploadFotoDiri">Upload Foto Diri</label>
+                            <input type="file" class="form-control-file" id="uploadFotoDiri" onchange="previewFile(event, 'previewFotoDiri')">
+                            <img id="previewFotoDiri" src="#" alt="Preview Foto Diri" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="uploadPortofolio">Upload Portofolio</label>
+                            <input type="file" class="form-control-file" id="uploadPortofolio" onchange="previewFile(event, 'previewPortofolio')">
+                            <img id="previewPortofolio" src="#" alt="Preview Portofolio" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+            function previewFile(event, previewId) {
+                var reader = new FileReader();
+                reader.onload = function(){
+                    var output = document.getElementById(previewId);
+                    output.src = reader.result;
+                    output.style.display = 'block';
+                }
+                reader.readAsDataURL(event.target.files[0]);
+            }
+            </script>
+            
+            
+            
+              <!-- /.card-body -->
+              <div class="card-footer">
+           
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <!--/.direct-chat -->
+
+            <!-- TO DO List -->
+           
+            <!-- /.card -->
+          </section>
+          <section class="col-lg-6 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+
+            <!-- /.card -->
+
+            <!-- DIRECT CHAT -->
+        
+            <div class="card direct-chat direct-chat-primary">
+              <div class="card-header">
+                <h3 class="card-title">Sertifikasi dan Keahlian</h3>
+
+                <div class="card-tools">
+                  <!-- <span title="3 New Messages" class="badge badge-primary">3</span> -->
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                 
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button> -->
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div id="keahlianContainer">
+                    <h5 class="mx-3">Keahlian</h5>
+                    <div class="row mx-3 keahlianItem">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Keahlian</label>
+                                <input type="text" class="form-control" name="keahlian[]">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>File Keahlian</label>
+                                <input type="file" class="form-control-file" onchange="previewFile(event, this)">
+                                <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-end">
+                            <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-primary mx-3 mt-3" onclick="addKeahlianField()">Tambah Keahlian</button>
+            
+                <hr>
+            
+                <div id="sertifikasiContainer">
+                    <h5 class="mx-3">Sertifikasi</h5>
+                    <div class="row mx-3 sertifikasiItem">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Sertifikasi</label>
+                                <input type="text" class="form-control" name="sertifikasi[]">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>File Sertifikasi</label>
+                                <input type="file" class="form-control-file" onchange="previewFile(event, this)">
+                                <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-end">
+                            <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-primary mx-3 mt-3" onclick="addSertifikasiField()">Tambah Sertifikasi</button>
+            </div>
+            
+            <script>
+            function previewFile(event, inputElement) {
+                var reader = new FileReader();
+                reader.onload = function(){
+                    var previewImage = inputElement.nextElementSibling;
+                    previewImage.src = reader.result;
+                    previewImage.style.display = 'block';
+                }
+                reader.readAsDataURL(event.target.files[0]);
+            }
+            
+            function addKeahlianField() {
+                let container = document.getElementById("keahlianContainer");
+                let newField = document.createElement("div");
+                newField.classList.add("row", "mx-3", "keahlianItem");
+                newField.innerHTML = `
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Keahlian</label>
+                            <input type="text" class="form-control" name="keahlian[]">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>File Keahlian</label>
+                            <input type="file" class="form-control-file" onchange="previewFile(event, this)">
+                            <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
+                    </div>
+                `;
+                container.appendChild(newField);
+            }
+            
+            function addSertifikasiField() {
+                let container = document.getElementById("sertifikasiContainer");
+                let newField = document.createElement("div");
+                newField.classList.add("row", "mx-3", "sertifikasiItem");
+                newField.innerHTML = `
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Sertifikasi</label>
+                            <input type="text" class="form-control" name="sertifikasi[]">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>File Sertifikasi</label>
+                            <input type="file" class="form-control-file" onchange="previewFile(event, this)">
+                            <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
+                    </div>
+                `;
+                container.appendChild(newField);
+            }
+            
+            function removeField(button) {
+                button.parentElement.parentElement.remove();
+            }
+            </script>
+            
+            
+            
+            
+            
+              <!-- /.card-body -->
+              <div class="card-footer">
+           
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <!--/.direct-chat -->
+
+            <!-- TO DO List -->
+           
+            <!-- /.card -->
+          </section>
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+        
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+</body>
+</html>
