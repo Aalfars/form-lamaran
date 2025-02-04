@@ -168,9 +168,16 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <div class="form-group mx-3">
-                    <label for="namaLengkap">Posisi Yang Dilamar</label>
-                    <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan Posisi Yang Dilamar">
-                </div>
+                  <label for="posisiDilamar">Posisi Yang Dilamar</label>
+                  <select class="form-control" id="posisiDilamar">
+                      <option value="welder">Welder</option>
+                      <option value="qc">QC</option>
+                      <option value="developer">Developer</option>
+                      <option value="designer">Designer</option>
+                      <option value="manager">Manager</option>
+                  </select>
+              </div>
+              
                 <div class="form-group mx-3">
                     <label for="email">Gaji Yang Diharapkan</label>
                     <input type="number" class="form-control" id="email" placeholder="Masukkan Gaji Yang Diharapkan">
@@ -207,9 +214,16 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <div class="form-group mx-3">
-                    <label for="namaLengkap">Pendidikan Terakhir</label>
-                    <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan Pendidikan Terakhir">
-                </div>
+                  <label for="pendidikanTerakhir">Pendidikan Terakhir</label>
+                  <select class="form-control" id="pendidikanTerakhir">
+                      <option value="sma">SMA/SMK</option>
+                      <option value="diploma">Diploma</option>
+                      <option value="s1">S1</option>
+                      <option value="s2">S2</option>
+                      <option value="s3">S3</option>
+                  </select>
+              </div>
+              
                 <div class="form-group mx-3">
                     <label for="email">Nama Institusi</label>
                     <input type="text" class="form-control" id="email" placeholder="Masukkan Nama Institusi">
@@ -384,7 +398,7 @@
         
             <div class="card direct-chat direct-chat-primary">
               <div class="card-header">
-                <h3 class="card-title">Sertifikasi dan Keahlian</h3>
+                <h3 class="card-title">Sertifikasi</h3>
 
                 <div class="card-tools">
                   <!-- <span title="3 New Messages" class="badge badge-primary">3</span> -->
@@ -399,61 +413,43 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <div id="keahlianContainer">
-                    <h5 class="mx-3">Keahlian</h5>
-                    <div class="row mx-3 keahlianItem">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Keahlian</label>
-                                <input type="text" class="form-control" name="keahlian[]">
+                <!-- Keahlian & Sertifikasi dalam satu row -->
+                <div class="addKeahlianSertifikasiField">
+
+                <div class="row mx-3">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Sertifikasi</label>
+                                    <input type="text" class="form-control" name="sertifikasi[]">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>File Keahlian</label>
-                                <input type="file" class="form-control-file" onchange="previewFile(event, this)">
-                                <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>File Sertifikasi</label>
+                                    <input type="file" class="form-control-file" onchange="previewFile(event, this)">
+                                    <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 d-flex align-items-end">
-                            <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
                         </div>
                     </div>
-                </div>
             
-                <button type="button" class="btn btn-primary mx-3 mt-3" onclick="addKeahlianField()">Tambah Keahlian</button>
+                  
             
-                <hr>
-            
-                <div id="sertifikasiContainer">
-                    <h5 class="mx-3">Sertifikasi</h5>
-                    <div class="row mx-3 sertifikasiItem">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Sertifikasi</label>
-                                <input type="text" class="form-control" name="sertifikasi[]">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>File Sertifikasi</label>
-                                <input type="file" class="form-control-file" onchange="previewFile(event, this)">
-                                <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
-                            </div>
-                        </div>
-                        <div class="col-md-4 d-flex align-items-end">
-                            <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
-                        </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
                     </div>
                 </div>
+                </div>
             
-                <button type="button" class="btn btn-primary mx-3 mt-3" onclick="addSertifikasiField()">Tambah Sertifikasi</button>
+                <button type="button" class="btn btn-primary mx-3 mt-3" onclick="addKeahlianSertifikasiField1()">Tambah Sertifikasi</button>
             </div>
             
             <script>
             function previewFile(event, inputElement) {
                 var reader = new FileReader();
-                reader.onload = function(){
+                reader.onload = function() {
                     var previewImage = inputElement.nextElementSibling;
                     previewImage.src = reader.result;
                     previewImage.style.display = 'block';
@@ -461,53 +457,37 @@
                 reader.readAsDataURL(event.target.files[0]);
             }
             
-            function addKeahlianField() {
-                let container = document.getElementById("keahlianContainer");
+            function addKeahlianSertifikasiField1() {
+                let container = document.querySelector(".addKeahlianSertifikasiField");
                 let newField = document.createElement("div");
-                newField.classList.add("row", "mx-3", "keahlianItem");
-                newField.innerHTML = `
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label>Keahlian</label>
-                            <input type="text" class="form-control" name="keahlian[]">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label>File Keahlian</label>
-                            <input type="file" class="form-control-file" onchange="previewFile(event, this)">
-                            <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-end">
-                        <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
-                    </div>
-                `;
-                container.appendChild(newField);
-            }
+                newField.classList.add("row", "mx-3");
             
-            function addSertifikasiField() {
-                let container = document.getElementById("sertifikasiContainer");
-                let newField = document.createElement("div");
-                newField.classList.add("row", "mx-3", "sertifikasiItem");
                 newField.innerHTML = `
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label>Sertifikasi</label>
-                            <input type="text" class="form-control" name="sertifikasi[]">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Sertifikasi</label>
+                                    <input type="text" class="form-control" name="sertifikasi[]">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>File Sertifikasi</label>
+                                    <input type="file" class="form-control-file" onchange="previewFile(event, this)">
+                                    <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label>File Sertifikasi</label>
-                            <input type="file" class="form-control-file" onchange="previewFile(event, this)">
-                            <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-end">
+            
+                  
+            
+                    <div class="col-md-2 d-flex align-items-end">
                         <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
                     </div>
                 `;
+            
                 container.appendChild(newField);
             }
             
@@ -515,6 +495,130 @@
                 button.parentElement.parentElement.remove();
             }
             </script>
+            
+            
+            
+            
+            
+            
+              <!-- /.card-body -->
+              <div class="card-footer">
+           
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <!--/.direct-chat -->
+
+            <!-- TO DO List -->
+           
+            <!-- /.card -->
+          </section>
+          <section class="col-lg-6 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+
+            <!-- /.card -->
+
+            <!-- DIRECT CHAT -->
+        
+            <div class="card direct-chat direct-chat-primary">
+              <div class="card-header">
+                <h3 class="card-title">Keahlian</h3>
+
+                <div class="card-tools">
+                  <!-- <span title="3 New Messages" class="badge badge-primary">3</span> -->
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                 
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button> -->
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <!-- Keahlian & Sertifikasi dalam satu row -->
+                <div class="addKeahlianSertifikasiField1">
+
+                <div class="row mx-3">
+                 
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Keahlian</label>
+                                    <input type="text" class="form-control" name="keahlian[]">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>File Keahlian</label>
+                                    <input type="file" class="form-control-file" onchange="previewFile(event, this)">
+                                    <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
+                    </div>
+                </div>
+                </div>
+            
+                <button type="button" class="btn btn-primary mx-3 mt-3" onclick="addKeahlianSertifikasiField()">Tambah Keahlian</button>
+            </div>
+            
+            <script>
+            function previewFile(event, inputElement) {
+                var reader = new FileReader();
+                reader.onload = function() {
+                    var previewImage = inputElement.nextElementSibling;
+                    previewImage.src = reader.result;
+                    previewImage.style.display = 'block';
+                }
+                reader.readAsDataURL(event.target.files[0]);
+            }
+            
+            function addKeahlianSertifikasiField() {
+                let container = document.querySelector(".addKeahlianSertifikasiField1");
+                let newField = document.createElement("div");
+                newField.classList.add("row", "mx-3");
+            
+                newField.innerHTML = `
+                 
+            
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Keahlian</label>
+                                    <input type="text" class="form-control" name="keahlian[]">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>File Keahlian</label>
+                                    <input type="file" class="form-control-file" onchange="previewFile(event, this)">
+                                    <img src="#" alt="Preview" class="img-thumbnail mt-2 preview-image" style="display: none; max-width: 150px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button type="button" class="btn btn-danger" onclick="removeField(this)">Hapus</button>
+                    </div>
+                `;
+            
+                container.appendChild(newField);
+            }
+            
+            function removeField(button) {
+                button.parentElement.parentElement.remove();
+            }
+            </script>
+            
             
             
             
