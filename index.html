@@ -296,11 +296,11 @@
                 </div>
                 <div class="form-group mx-3">
                     <label for="tanggungJawab">Tanggung Jawab Utama</label>
-                    <textarea class="form-control" id="tanggungJawab" rows="3" placeholder="Masukkan tanggung jawab utama"></textarea>
+                    <textarea class="form-control" id="tanggungJawab" rows="7" placeholder="Masukkan tanggung jawab utama"></textarea>
                 </div>
                 <div class="form-group mx-3">
                     <label for="alasanBerhenti">Alasan Berhenti</label>
-                    <textarea class="form-control" id="alasanBerhenti" rows="3" placeholder="Masukkan alasan berhenti"></textarea>
+                    <textarea class="form-control" id="alasanBerhenti" rows="7" placeholder="Masukkan alasan berhenti"></textarea>
                 </div>
             </div>
             
@@ -311,87 +311,14 @@
               </div>
               <!-- /.card-footer-->
             </div>
-            <div class="card direct-chat direct-chat-primary">
-              <div class="card-header">
-                <h3 class="card-title">Dokumen Pendukung</h3>
-
-                <div class="card-tools">
-                  <!-- <span title="3 New Messages" class="badge badge-primary">3</span> -->
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                 
-                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button> -->
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <div class="row mx-3">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="uploadCV">Upload CV</label>
-                            <input type="file" class="form-control-file" id="uploadCV" onchange="previewFile(event, this)">
-                            <img id="previewCV" src="#" alt="Preview CV" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="uploadSuratLamaran">Upload Surat Lamaran</label>
-                            <input type="file" class="form-control-file" id="uploadSuratLamaran" onchange="previewFile(event, this)">
-                            <img id="previewSuratLamaran" src="#" alt="Preview Surat Lamaran" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="row mx-3">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="uploadFotoDiri">Upload Foto Diri</label>
-                            <input type="file" class="form-control-file" id="uploadFotoDiri" onchange="previewFile(event, this)">
-                            <img id="previewFotoDiri" src="#" alt="Preview Foto Diri" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="uploadPortofolio">Upload Portofolio</label>
-                            <input type="file" class="form-control-file" id="uploadPortofolio" onchange="previewFile(event, this)">
-                            <img id="previewPortofolio" src="#" alt="Preview Portofolio" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <script>
-              function previewFile(event, inputElement) {
-                var reader = new FileReader();
-                reader.onload = function() {
-                    var previewImage = inputElement.nextElementSibling;
-                    previewImage.src = reader.result;
-                    previewImage.style.display = 'block';
-                }
-                reader.readAsDataURL(event.target.files[0]);
-            }
-            
-              </script>
-              
-            
-            
-            
-              <!-- /.card-body -->
-              <div class="card-footer">
            
-              </div>
-              <!-- /.card-footer-->
-            </div>
             <!--/.direct-chat -->
 
             <!-- TO DO List -->
            
             <!-- /.card -->
           </section>
-          <section class="col-lg-6 connectedSortable">
+          <section class="col-lg-4 connectedSortable">
             <!-- Custom tabs (Charts with tabs)-->
 
             <!-- /.card -->
@@ -515,7 +442,7 @@
            
             <!-- /.card -->
           </section>
-          <section class="col-lg-6 connectedSortable">
+          <section class="col-lg-4 connectedSortable">
             <!-- Custom tabs (Charts with tabs)-->
 
             <!-- /.card -->
@@ -623,6 +550,93 @@
             
             
             
+            
+            
+            
+              <!-- /.card-body -->
+              <div class="card-footer">
+           
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <!--/.direct-chat -->
+
+            <!-- TO DO List -->
+           
+            <!-- /.card -->
+          </section>
+          <section class="col-lg-4 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+
+            <!-- /.card -->
+
+            <!-- DIRECT CHAT -->
+        
+            <div class="card direct-chat direct-chat-primary">
+              <div class="card-header">
+                <h3 class="card-title">Dokumen Pendukung</h3>
+
+                <div class="card-tools">
+                  <!-- <span title="3 New Messages" class="badge badge-primary">3</span> -->
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                 
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button> -->
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row mx-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="uploadCV">Upload CV</label>
+                            <input type="file" class="form-control-file" id="uploadCV" onchange="previewFile(event, this)">
+                            <img id="previewCV" src="#" alt="Preview CV" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="uploadSuratLamaran">Upload Surat Lamaran</label>
+                            <input type="file" class="form-control-file" id="uploadSuratLamaran" onchange="previewFile(event, this)">
+                            <img id="previewSuratLamaran" src="#" alt="Preview Surat Lamaran" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row mx-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="uploadFotoDiri">Upload Foto Diri</label>
+                            <input type="file" class="form-control-file" id="uploadFotoDiri" onchange="previewFile(event, this)">
+                            <img id="previewFotoDiri" src="#" alt="Preview Foto Diri" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="uploadPortofolio">Upload Portofolio</label>
+                            <input type="file" class="form-control-file" id="uploadPortofolio" onchange="previewFile(event, this)">
+                            <img id="previewPortofolio" src="#" alt="Preview Portofolio" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+              function previewFile(event, inputElement) {
+                var reader = new FileReader();
+                reader.onload = function() {
+                    var previewImage = inputElement.nextElementSibling;
+                    previewImage.src = reader.result;
+                    previewImage.style.display = 'block';
+                }
+                reader.readAsDataURL(event.target.files[0]);
+            }
+            
+              </script>
+              
             
             
             
