@@ -332,14 +332,14 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="uploadCV">Upload CV</label>
-                            <input type="file" class="form-control-file" id="uploadCV" onchange="previewFile(event, 'previewCV')">
+                            <input type="file" class="form-control-file" id="uploadCV" onchange="previewFile(event, this)">
                             <img id="previewCV" src="#" alt="Preview CV" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="uploadSuratLamaran">Upload Surat Lamaran</label>
-                            <input type="file" class="form-control-file" id="uploadSuratLamaran" onchange="previewFile(event, 'previewSuratLamaran')">
+                            <input type="file" class="form-control-file" id="uploadSuratLamaran" onchange="previewFile(event, this)">
                             <img id="previewSuratLamaran" src="#" alt="Preview Surat Lamaran" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
                         </div>
                     </div>
@@ -349,14 +349,14 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="uploadFotoDiri">Upload Foto Diri</label>
-                            <input type="file" class="form-control-file" id="uploadFotoDiri" onchange="previewFile(event, 'previewFotoDiri')">
+                            <input type="file" class="form-control-file" id="uploadFotoDiri" onchange="previewFile(event, this)">
                             <img id="previewFotoDiri" src="#" alt="Preview Foto Diri" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="uploadPortofolio">Upload Portofolio</label>
-                            <input type="file" class="form-control-file" id="uploadPortofolio" onchange="previewFile(event, 'previewPortofolio')">
+                            <input type="file" class="form-control-file" id="uploadPortofolio" onchange="previewFile(event, this)">
                             <img id="previewPortofolio" src="#" alt="Preview Portofolio" class="img-thumbnail mt-2" style="display: none; max-width: 150px;">
                         </div>
                     </div>
@@ -364,16 +364,18 @@
             </div>
             
             <script>
-            function previewFile(event, previewId) {
+              function previewFile(event, inputElement) {
                 var reader = new FileReader();
-                reader.onload = function(){
-                    var output = document.getElementById(previewId);
-                    output.src = reader.result;
-                    output.style.display = 'block';
+                reader.onload = function() {
+                    var previewImage = inputElement.nextElementSibling;
+                    previewImage.src = reader.result;
+                    previewImage.style.display = 'block';
                 }
                 reader.readAsDataURL(event.target.files[0]);
             }
-            </script>
+            
+              </script>
+              
             
             
             
